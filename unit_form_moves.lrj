@@ -1,0 +1,9 @@
+{"version":1,"strings":[
+{"hash":57195091,"name":"tform_moves.caption","sourcebytes":[70,111,114,109,95,109,111,118,101,115],"value":"Form_moves"},
+{"hash":253974483,"name":"tform_moves.tabsheet_debts.caption","sourcebytes":[84,97,98,83,104,101,101,116,95,100,101,98,116,115],"value":"TabSheet_debts"},
+{"hash":103109699,"name":"tform_moves.tabsheet_payments.caption","sourcebytes":[84,97,98,83,104,101,101,116,95,112,97,121,109,101,110,116,115],"value":"TabSheet_payments"},
+{"hash":147238389,"name":"tform_moves.button_close.caption","sourcebytes":[66,117,116,116,111,110,95,99,108,111,115,101],"value":"Button_close"},
+{"hash":191417108,"name":"tform_moves.button_add.caption","sourcebytes":[66,117,116,116,111,110,95,97,100,100],"value":"Button_add"},
+{"hash":235805017,"name":"tform_moves.button_modify.caption","sourcebytes":[66,117,116,116,111,110,95,109,111,100,105,102,121],"value":"Button_modify"},
+{"hash":207723045,"name":"tform_moves.button_delete.caption","sourcebytes":[66,117,116,116,111,110,95,100,101,108,101,116,101],"value":"Button_delete"}
+]}

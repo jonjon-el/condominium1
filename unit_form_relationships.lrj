@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":170789331,"name":"tform_relationships.caption","sourcebytes":[70,111,114,109,95,114,101,108,97,116,105,111,110,115,104,105,112,115],"value":"Form_relationships"},
+{"hash":196512763,"name":"tform_relationships.button_ok.caption","sourcebytes":[66,117,116,116,111,110,95,79,75],"value":"Button_OK"},
+{"hash":173932348,"name":"tform_relationships.button_cancel.caption","sourcebytes":[66,117,116,116,111,110,95,67,97,110,99,101,108],"value":"Button_Cancel"},
+{"hash":235805017,"name":"tform_relationships.button_modify.caption","sourcebytes":[66,117,116,116,111,110,95,109,111,100,105,102,121],"value":"Button_modify"}
+]}

@@ -1,0 +1,11 @@
+{"version":1,"strings":[
+{"hash":116073300,"name":"tform_modifydebt.caption","sourcebytes":[70,111,114,109,95,109,111,100,105,102,121,68,101,98,116],"value":"Form_modifyDebt"},
+{"hash":226838707,"name":"tform_modifydebt.groupbox_nic.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,110,105,99],"value":"GroupBox_nic"},
+{"hash":185229379,"name":"tform_modifydebt.edit_nic.text","sourcebytes":[69,100,105,116,95,110,105,99],"value":"Edit_nic"},
+{"hash":63484932,"name":"tform_modifydebt.groupbox_amount.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,97,109,111,117,110,116],"value":"GroupBox_amount"},
+{"hash":4960369,"name":"tform_modifydebt.edit_amount.text","sourcebytes":[69,100,105,116,49],"value":"Edit1"},
+{"hash":139684981,"name":"tform_modifydebt.groupbox_date.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,100,97,116,101],"value":"GroupBox_date"},
+{"hash":4960369,"name":"tform_modifydebt.edit_date.text","sourcebytes":[69,100,105,116,49],"value":"Edit1"},
+{"hash":196512763,"name":"tform_modifydebt.button_ok.caption","sourcebytes":[66,117,116,116,111,110,95,79,75],"value":"Button_OK"},
+{"hash":207486780,"name":"tform_modifydebt.button_cancel.caption","sourcebytes":[66,117,116,116,111,110,95,99,97,110,99,101,108],"value":"Button_cancel"}
+]}

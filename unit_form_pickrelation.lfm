@@ -1,0 +1,71 @@
+object Form_pickRelation: TForm_pickRelation
+  Left = 396
+  Height = 576
+  Top = 164
+  Width = 768
+  Caption = 'Form_pickRelation'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object Button_property2person: TButton
+    Left = 19
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_property2person'
+    OnClick = Button_property2personClick
+    TabOrder = 1
+  end
+  object Button_person2property: TButton
+    Left = 144
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_person2property'
+    OnClick = Button_person2propertyClick
+    TabOrder = 2
+  end
+  object Button_back: TButton
+    Left = 269
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_back'
+    OnClick = Button_backClick
+    TabOrder = 3
+  end
+  object StringGrid1: TStringGrid
+    Left = 19
+    Height = 442
+    Top = 29
+    Width = 730
+    ColCount = 4
+    FixedCols = 0
+    TabOrder = 4
+    Cells = (
+      4
+      0
+      0
+      'NIC'
+      1
+      0
+      'First Name'
+      2
+      0
+      'Last Name'
+      3
+      0
+      'Property Name'
+    )
+  end
+end

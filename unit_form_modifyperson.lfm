@@ -1,0 +1,116 @@
+object Form_modifyPerson: TForm_modifyPerson
+  Left = 613
+  Height = 576
+  Top = 353
+  Width = 768
+  AlphaBlend = True
+  Caption = 'Form_modifyPerson'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  ParentFont = True
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object GroupBox_nic: TGroupBox
+    Left = 19
+    Height = 86
+    Top = 19
+    Width = 730
+    Caption = 'GroupBox_nic'
+    ClientHeight = 56
+    ClientWidth = 726
+    TabOrder = 0
+    object Edit_nic: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 682
+      TabOrder = 0
+      Text = 'Edit_nic'
+    end
+  end
+  object GroupBox_firstName: TGroupBox
+    Left = 19
+    Height = 86
+    Top = 115
+    Width = 730
+    Caption = 'GroupBox_firstName'
+    ClientHeight = 56
+    ClientWidth = 726
+    TabOrder = 1
+    object Edit_firstName: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 682
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+  end
+  object GroupBox_lastName: TGroupBox
+    Left = 19
+    Height = 86
+    Top = 211
+    Width = 730
+    Caption = 'GroupBox_lastName'
+    ClientHeight = 56
+    ClientWidth = 726
+    TabOrder = 2
+    object Edit_lastName: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 682
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+  end
+  object GroupBox_birthDay: TGroupBox
+    Left = 19
+    Height = 86
+    Top = 307
+    Width = 730
+    Caption = 'GroupBox_birthDay'
+    ClientHeight = 56
+    ClientWidth = 726
+    TabOrder = 3
+    object DateEdit_birthDay: TDateEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 155
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      DateOrder = doNone
+      ButtonWidth = 35
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 0
+      Text = 'DateEdit_birthDay'
+    end
+  end
+  object Button_OK: TButton
+    Left = 19
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_OK'
+    OnClick = Button_OKClick
+    TabOrder = 4
+  end
+  object Button_cancel: TButton
+    Left = 144
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_cancel'
+    OnClick = Button_cancelClick
+    TabOrder = 5
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+end

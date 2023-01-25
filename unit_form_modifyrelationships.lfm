@@ -1,0 +1,55 @@
+object Form_modifyRelationships: TForm_modifyRelationships
+  Left = 396
+  Height = 576
+  Top = 164
+  Width = 768
+  AlphaBlend = True
+  Caption = 'Form_modifyRelationships'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  ParentFont = True
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object CheckListBox_owned: TCheckListBox
+    Left = 19
+    Height = 307
+    Top = 163
+    Width = 726
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object ListBox_owner: TListBox
+    Left = 19
+    Height = 120
+    Top = 19
+    Width = 726
+    ItemHeight = 0
+    TabOrder = 2
+  end
+  object Button_OK: TButton
+    Left = 19
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_OK'
+    OnClick = Button_OKClick
+    TabOrder = 3
+  end
+  object Button_Cancel: TButton
+    Left = 144
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_Cancel'
+    OnClick = Button_CancelClick
+    TabOrder = 4
+  end
+end

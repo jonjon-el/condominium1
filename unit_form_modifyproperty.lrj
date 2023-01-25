@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":27271497,"name":"tform_modifyproperty.caption","sourcebytes":[70,111,114,109,95,109,111,100,105,102,121,80,114,111,112,101,114,116,121],"value":"Form_modifyProperty"},
+{"hash":139756773,"name":"tform_modifyproperty.groupbox_name.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,110,97,109,101],"value":"GroupBox_name"},
+{"hash":94702407,"name":"tform_modifyproperty.groupbox_sharing.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,115,104,97,114,105,110,103],"value":"GroupBox_sharing"},
+{"hash":196512763,"name":"tform_modifyproperty.button_ok.caption","sourcebytes":[66,117,116,116,111,110,95,79,75],"value":"Button_OK"},
+{"hash":173932348,"name":"tform_modifyproperty.button_cancel.caption","sourcebytes":[66,117,116,116,111,110,95,67,97,110,99,101,108],"value":"Button_Cancel"}
+]}

@@ -1,0 +1,13 @@
+{"version":1,"strings":[
+{"hash":149184702,"name":"tform_modifyperson.caption","sourcebytes":[70,111,114,109,95,109,111,100,105,102,121,80,101,114,115,111,110],"value":"Form_modifyPerson"},
+{"hash":226838707,"name":"tform_modifyperson.groupbox_nic.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,110,105,99],"value":"GroupBox_nic"},
+{"hash":185229379,"name":"tform_modifyperson.edit_nic.text","sourcebytes":[69,100,105,116,95,110,105,99],"value":"Edit_nic"},
+{"hash":70154101,"name":"tform_modifyperson.groupbox_firstname.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,102,105,114,115,116,78,97,109,101],"value":"GroupBox_firstName"},
+{"hash":4960369,"name":"tform_modifyperson.edit_firstname.text","sourcebytes":[69,100,105,116,49],"value":"Edit1"},
+{"hash":208737493,"name":"tform_modifyperson.groupbox_lastname.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,108,97,115,116,78,97,109,101],"value":"GroupBox_lastName"},
+{"hash":4960369,"name":"tform_modifyperson.edit_lastname.text","sourcebytes":[69,100,105,116,49],"value":"Edit1"},
+{"hash":71473625,"name":"tform_modifyperson.groupbox_birthday.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,98,105,114,116,104,68,97,121],"value":"GroupBox_birthDay"},
+{"hash":190899625,"name":"tform_modifyperson.dateedit_birthday.text","sourcebytes":[68,97,116,101,69,100,105,116,95,98,105,114,116,104,68,97,121],"value":"DateEdit_birthDay"},
+{"hash":196512763,"name":"tform_modifyperson.button_ok.caption","sourcebytes":[66,117,116,116,111,110,95,79,75],"value":"Button_OK"},
+{"hash":207486780,"name":"tform_modifyperson.button_cancel.caption","sourcebytes":[66,117,116,116,111,110,95,99,97,110,99,101,108],"value":"Button_cancel"}
+]}

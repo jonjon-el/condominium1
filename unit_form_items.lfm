@@ -1,0 +1,116 @@
+object Form_items: TForm_items
+  Left = 436
+  Height = 576
+  Top = 158
+  Width = 768
+  AlphaBlend = True
+  Caption = 'Form_items'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnShow = FormShow
+  ParentFont = True
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object PageControl_items: TPageControl
+    Left = 29
+    Height = 461
+    Top = 19
+    Width = 713
+    ActivePage = TabSheet_persons
+    TabIndex = 0
+    TabOrder = 0
+    OnChange = PageControl_itemsChange
+    object TabSheet_persons: TTabSheet
+      Caption = 'TabSheet_persons'
+      ClientHeight = 423
+      ClientWidth = 705
+      object StringGrid1: TStringGrid
+        Left = 19
+        Height = 394
+        Top = 19
+        Width = 672
+        TabOrder = 0
+        Cells = (
+          4
+          1
+          0
+          'NIC'
+          2
+          0
+          'FirstName'
+          3
+          0
+          'LastName'
+          4
+          0
+          'Birthday'
+        )
+      end
+    end
+    object TabSheet_properties: TTabSheet
+      Caption = 'TabSheet_properties'
+      ClientHeight = 423
+      ClientWidth = 705
+      object StringGrid2: TStringGrid
+        Left = 19
+        Height = 394
+        Top = 19
+        Width = 672
+        AutoEdit = False
+        TabOrder = 0
+        Cells = (
+          2
+          1
+          0
+          'Name'
+          2
+          0
+          'Sharing'
+        )
+      end
+    end
+  end
+  object Button_OK: TButton
+    Left = 35
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_OK'
+    OnClick = Button_OKClick
+    TabOrder = 1
+  end
+  object Button_modify: TButton
+    Left = 278
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_modify'
+    OnClick = Button_modifyClick
+    TabOrder = 2
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object Button_add: TButton
+    Left = 154
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_add'
+    TabOrder = 4
+  end
+  object Button_delete: TButton
+    Left = 403
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_delete'
+    TabOrder = 5
+  end
+end

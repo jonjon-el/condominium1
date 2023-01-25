@@ -1,0 +1,135 @@
+object Form_moves: TForm_moves
+  Left = 442
+  Height = 576
+  Top = 150
+  Width = 768
+  Caption = 'Form_moves'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object PageControl1: TPageControl
+    Left = 19
+    Height = 454
+    Top = 19
+    Width = 732
+    ActivePage = TabSheet_payments
+    TabIndex = 1
+    TabOrder = 1
+    object TabSheet_debts: TTabSheet
+      Caption = 'TabSheet_debts'
+      ClientHeight = 416
+      ClientWidth = 724
+      object StringGrid1: TStringGrid
+        Left = 19
+        Height = 380
+        Top = 19
+        Width = 682
+        TabOrder = 0
+        Cells = (
+          3
+          1
+          0
+          'nic'
+          2
+          0
+          'amount'
+          3
+          0
+          'date'
+        )
+      end
+    end
+    object TabSheet_payments: TTabSheet
+      Caption = 'TabSheet_payments'
+      ClientHeight = 416
+      ClientWidth = 724
+      object StringGrid2: TStringGrid
+        Left = 19
+        Height = 384
+        Top = 19
+        Width = 684
+        ColCount = 8
+        TabOrder = 0
+        ColWidths = (
+          96
+          96
+          96
+          96
+          97
+          96
+          96
+          96
+        )
+        Cells = (
+          7
+          1
+          0
+          'Property Name'
+          2
+          0
+          'NIC'
+          3
+          0
+          'First Name'
+          4
+          0
+          'Last Name'
+          5
+          0
+          'Amount'
+          6
+          0
+          'Date'
+          7
+          0
+          'Bank reference'
+        )
+      end
+    end
+  end
+  object Button_close: TButton
+    Left = 19
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_close'
+    OnClick = Button_closeClick
+    TabOrder = 2
+  end
+  object Button_add: TButton
+    Left = 144
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_add'
+    TabOrder = 3
+  end
+  object Button_modify: TButton
+    Left = 269
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_modify'
+    OnClick = Button_modifyClick
+    TabOrder = 4
+  end
+  object Button_delete: TButton
+    Left = 394
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_delete'
+    TabOrder = 5
+  end
+end

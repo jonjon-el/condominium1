@@ -1,0 +1,320 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tform_items.button_add.caption
+msgctxt "tform_items.button_add.caption"
+msgid "Button_add"
+msgstr ""
+
+#: tform_items.button_delete.caption
+msgctxt "tform_items.button_delete.caption"
+msgid "Button_delete"
+msgstr ""
+
+#: tform_items.button_modify.caption
+msgctxt "tform_items.button_modify.caption"
+msgid "Button_modify"
+msgstr ""
+
+#: tform_items.button_ok.caption
+msgctxt "tform_items.button_ok.caption"
+msgid "Button_OK"
+msgstr ""
+
+#: tform_items.caption
+msgid "Form_items"
+msgstr ""
+
+#: tform_items.tabsheet_persons.caption
+msgid "TabSheet_persons"
+msgstr ""
+
+#: tform_items.tabsheet_properties.caption
+msgid "TabSheet_properties"
+msgstr ""
+
+#: tform_modifydebt.button_cancel.caption
+msgctxt "tform_modifydebt.button_cancel.caption"
+msgid "Button_cancel"
+msgstr ""
+
+#: tform_modifydebt.button_ok.caption
+msgctxt "tform_modifydebt.button_ok.caption"
+msgid "Button_OK"
+msgstr ""
+
+#: tform_modifydebt.caption
+msgid "Form_modifyDebt"
+msgstr ""
+
+#: tform_modifydebt.edit_amount.text
+msgctxt "tform_modifydebt.edit_amount.text"
+msgid "Edit1"
+msgstr ""
+
+#: tform_modifydebt.edit_date.text
+msgctxt "tform_modifydebt.edit_date.text"
+msgid "Edit1"
+msgstr ""
+
+#: tform_modifydebt.edit_nic.text
+msgctxt "tform_modifydebt.edit_nic.text"
+msgid "Edit_nic"
+msgstr ""
+
+#: tform_modifydebt.groupbox_amount.caption
+msgctxt "tform_modifydebt.groupbox_amount.caption"
+msgid "GroupBox_amount"
+msgstr ""
+
+#: tform_modifydebt.groupbox_date.caption
+msgctxt "tform_modifydebt.groupbox_date.caption"
+msgid "GroupBox_date"
+msgstr ""
+
+#: tform_modifydebt.groupbox_nic.caption
+msgctxt "tform_modifydebt.groupbox_nic.caption"
+msgid "GroupBox_nic"
+msgstr ""
+
+#: tform_modifypayment.button_cancel.caption
+msgctxt "tform_modifypayment.button_cancel.caption"
+msgid "Button_cancel"
+msgstr ""
+
+#: tform_modifypayment.button_ok.caption
+msgctxt "tform_modifypayment.button_ok.caption"
+msgid "Button_OK"
+msgstr ""
+
+#: tform_modifypayment.caption
+msgid "Form_modifyPayment"
+msgstr ""
+
+#: tform_modifypayment.groupbox_amount.caption
+msgctxt "tform_modifypayment.groupbox_amount.caption"
+msgid "GroupBox_amount"
+msgstr ""
+
+#: tform_modifypayment.groupbox_date.caption
+msgctxt "tform_modifypayment.groupbox_date.caption"
+msgid "GroupBox_date"
+msgstr ""
+
+#: tform_modifypayment.groupbox_firstname.caption
+msgctxt "tform_modifypayment.groupbox_firstname.caption"
+msgid "GroupBox_firstName"
+msgstr ""
+
+#: tform_modifypayment.groupbox_lastname.caption
+msgctxt "tform_modifypayment.groupbox_lastname.caption"
+msgid "GroupBox_lastName"
+msgstr ""
+
+#: tform_modifypayment.groupbox_nic.caption
+msgid "GroupBox_NIC"
+msgstr ""
+
+#: tform_modifypayment.groupbox_propertyname.caption
+msgid "GroupBox_propertyName"
+msgstr ""
+
+#: tform_modifyperson.button_cancel.caption
+msgctxt "tform_modifyperson.button_cancel.caption"
+msgid "Button_cancel"
+msgstr ""
+
+#: tform_modifyperson.button_ok.caption
+msgctxt "tform_modifyperson.button_ok.caption"
+msgid "Button_OK"
+msgstr ""
+
+#: tform_modifyperson.caption
+msgid "Form_modifyPerson"
+msgstr ""
+
+#: tform_modifyperson.dateedit_birthday.text
+msgctxt "tform_modifyperson.dateedit_birthday.text"
+msgid "DateEdit_birthDay"
+msgstr ""
+
+#: tform_modifyperson.edit_firstname.text
+msgctxt "tform_modifyperson.edit_firstname.text"
+msgid "Edit1"
+msgstr ""
+
+#: tform_modifyperson.edit_lastname.text
+msgctxt "tform_modifyperson.edit_lastname.text"
+msgid "Edit1"
+msgstr ""
+
+#: tform_modifyperson.edit_nic.text
+msgctxt "tform_modifyperson.edit_nic.text"
+msgid "Edit_nic"
+msgstr ""
+
+#: tform_modifyperson.groupbox_birthday.caption
+msgctxt "tform_modifyperson.groupbox_birthday.caption"
+msgid "GroupBox_birthDay"
+msgstr ""
+
+#: tform_modifyperson.groupbox_firstname.caption
+msgctxt "tform_modifyperson.groupbox_firstname.caption"
+msgid "GroupBox_firstName"
+msgstr ""
+
+#: tform_modifyperson.groupbox_lastname.caption
+msgctxt "tform_modifyperson.groupbox_lastname.caption"
+msgid "GroupBox_lastName"
+msgstr ""
+
+#: tform_modifyperson.groupbox_nic.caption
+msgctxt "tform_modifyperson.groupbox_nic.caption"
+msgid "GroupBox_nic"
+msgstr ""
+
+#: tform_modifyproperty.button_cancel.caption
+msgctxt "tform_modifyproperty.button_cancel.caption"
+msgid "Button_Cancel"
+msgstr ""
+
+#: tform_modifyproperty.button_ok.caption
+msgctxt "tform_modifyproperty.button_ok.caption"
+msgid "Button_OK"
+msgstr ""
+
+#: tform_modifyproperty.caption
+msgid "Form_modifyProperty"
+msgstr ""
+
+#: tform_modifyproperty.groupbox_name.caption
+msgid "GroupBox_name"
+msgstr ""
+
+#: tform_modifyproperty.groupbox_sharing.caption
+msgid "GroupBox_sharing"
+msgstr ""
+
+#: tform_modifyrelationships.button_cancel.caption
+msgctxt "tform_modifyrelationships.button_cancel.caption"
+msgid "Button_Cancel"
+msgstr ""
+
+#: tform_modifyrelationships.button_ok.caption
+msgctxt "tform_modifyrelationships.button_ok.caption"
+msgid "Button_OK"
+msgstr ""
+
+#: tform_modifyrelationships.caption
+msgid "Form_modifyRelationships"
+msgstr ""
+
+#: tform_moves.button_add.caption
+msgctxt "tform_moves.button_add.caption"
+msgid "Button_add"
+msgstr ""
+
+#: tform_moves.button_close.caption
+msgctxt "tform_moves.button_close.caption"
+msgid "Button_close"
+msgstr ""
+
+#: tform_moves.button_delete.caption
+msgctxt "tform_moves.button_delete.caption"
+msgid "Button_delete"
+msgstr ""
+
+#: tform_moves.button_modify.caption
+msgctxt "tform_moves.button_modify.caption"
+msgid "Button_modify"
+msgstr ""
+
+#: tform_moves.caption
+msgid "Form_moves"
+msgstr ""
+
+#: tform_moves.tabsheet_debts.caption
+msgid "TabSheet_debts"
+msgstr ""
+
+#: tform_moves.tabsheet_payments.caption
+msgid "TabSheet_payments"
+msgstr ""
+
+#: tform_pickrelation.button_back.caption
+msgid "Button_back"
+msgstr ""
+
+#: tform_pickrelation.button_person2property.caption
+msgid "Button_person2property"
+msgstr ""
+
+#: tform_pickrelation.button_property2person.caption
+msgid "Button_property2person"
+msgstr ""
+
+#: tform_pickrelation.caption
+msgid "Form_pickRelation"
+msgstr ""
+
+#: tform_report.button_close.caption
+msgctxt "tform_report.button_close.caption"
+msgid "Button_close"
+msgstr ""
+
+#: tform_report.button_generate1.caption
+msgid "Button_generate1"
+msgstr ""
+
+#: tform_report.button_generate2.caption
+msgid "Button_generate2"
+msgstr ""
+
+#: tform_report.button_save.caption
+msgid "Button_save"
+msgstr ""
+
+#: tform_report.caption
+msgid "Form_report"
+msgstr ""
+
+#: tform_report.datetimepicker1.textfornulldate
+msgid "NULL"
+msgstr ""
+
+#: tform_report.label1.caption
+msgid "Label1"
+msgstr ""
+
+#: tform_report.label2.caption
+msgid "Label2"
+msgstr ""
+
+#: tform_report.tabsheet1.caption
+msgid "TabSheet1"
+msgstr ""
+
+#: tform_report.tabsheet2.caption
+msgid "TabSheet2"
+msgstr ""
+
+#: tform_root.button_items.caption
+msgid "Button_items"
+msgstr ""
+
+#: tform_root.button_moves.caption
+msgid "Button_moves"
+msgstr ""
+
+#: tform_root.button_relations.caption
+msgid "Button_relations"
+msgstr ""
+
+#: tform_root.button_report.caption
+msgid "Button_report"
+msgstr ""
+
+#: tform_root.caption
+msgid "Form_root"
+msgstr ""
+

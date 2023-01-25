@@ -1,0 +1,11 @@
+{"version":1,"strings":[
+{"hash":235165396,"name":"tform_modifypayment.caption","sourcebytes":[70,111,114,109,95,109,111,100,105,102,121,80,97,121,109,101,110,116],"value":"Form_modifyPayment"},
+{"hash":151124645,"name":"tform_modifypayment.groupbox_propertyname.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,112,114,111,112,101,114,116,121,78,97,109,101],"value":"GroupBox_propertyName"},
+{"hash":226848403,"name":"tform_modifypayment.groupbox_nic.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,78,73,67],"value":"GroupBox_NIC"},
+{"hash":70154101,"name":"tform_modifypayment.groupbox_firstname.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,102,105,114,115,116,78,97,109,101],"value":"GroupBox_firstName"},
+{"hash":196512763,"name":"tform_modifypayment.button_ok.caption","sourcebytes":[66,117,116,116,111,110,95,79,75],"value":"Button_OK"},
+{"hash":207486780,"name":"tform_modifypayment.button_cancel.caption","sourcebytes":[66,117,116,116,111,110,95,99,97,110,99,101,108],"value":"Button_cancel"},
+{"hash":208737493,"name":"tform_modifypayment.groupbox_lastname.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,108,97,115,116,78,97,109,101],"value":"GroupBox_lastName"},
+{"hash":63484932,"name":"tform_modifypayment.groupbox_amount.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,97,109,111,117,110,116],"value":"GroupBox_amount"},
+{"hash":139684981,"name":"tform_modifypayment.groupbox_date.caption","sourcebytes":[71,114,111,117,112,66,111,120,95,100,97,116,101],"value":"GroupBox_date"}
+]}

@@ -1,0 +1,44 @@
+CREATE TABLE persons
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	nic VARCHAR(20) NOT NULL UNIQUE,
+	firstName VARCHAR(50) NOT NULL,
+	lastName VARCHAR(50) NOT NULL,
+	birthDay INTEGER NOT NULL
+);
+
+CREATE TABLE properties
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	name VARCHAR(20) NOT NULL UNIQUE,
+	alicuota NUMERIC(10, 2) NOT NULL
+);
+
+CREATE TABLE propietaries
+(
+	id_owner INTEGER NOT NULL,
+	id_property VARCHAR(20) NOT NULL,
+	FOREIGN KEY (id_owner) REFERENCES persons(id),
+	FOREIGN KEY (id_property) REFERENCES properties(id)
+);
+
+CREATE TABLE payments
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	id_property VARCHAR(20) NOT NULL,
+	id_person INTEGER NOT NULL,
+	amount NUMERIC(10, 2) NOT NULL,
+	date INTEGER NOT NULL,
+	id_bank VARCHAR(20) UNIQUE,
+	FOREIGN KEY (id_property) REFERENCES properties(id),
+	FOREIGN KEY (id_person) REFERENCES persons(id)
+);
+
+CREATE TABLE debts
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	id_person INTEGER NOT NULL,
+	amount NUMERIC(10, 2) NOT NULL,
+	date INTEGER NOT NULL,
+	FOREIGN KEY (id_person) REFERENCES persons(id)
+);

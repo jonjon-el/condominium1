@@ -1,0 +1,74 @@
+object Form_modifyProperty: TForm_modifyProperty
+  Left = 673
+  Height = 576
+  Top = 350
+  Width = 768
+  AlphaBlend = True
+  Caption = 'Form_modifyProperty'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  ParentFont = True
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object GroupBox_name: TGroupBox
+    Left = 29
+    Height = 96
+    Top = 29
+    Width = 710
+    Caption = 'GroupBox_name'
+    ClientHeight = 66
+    ClientWidth = 706
+    TabOrder = 0
+    object Edit_name: TEdit
+      Left = 19
+      Height = 33
+      Top = 19
+      Width = 653
+      OnChange = Edit_nameChange
+      TabOrder = 0
+    end
+  end
+  object GroupBox_sharing: TGroupBox
+    Left = 29
+    Height = 96
+    Top = 144
+    Width = 710
+    Caption = 'GroupBox_sharing'
+    ClientHeight = 66
+    ClientWidth = 706
+    TabOrder = 1
+    object Edit_sharing: TEdit
+      Left = 19
+      Height = 33
+      Top = 19
+      Width = 653
+      TabOrder = 0
+    end
+  end
+  object Button_OK: TButton
+    Left = 29
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_OK'
+    OnClick = Button_OKClick
+    TabOrder = 2
+  end
+  object Button_Cancel: TButton
+    Left = 163
+    Height = 37
+    Top = 490
+    Width = 113
+    Caption = 'Button_Cancel'
+    OnClick = Button_CancelClick
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+end

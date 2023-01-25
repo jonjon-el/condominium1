@@ -1,0 +1,25 @@
+object DataModule_main: TDataModule_main
+  OldCreateOrder = False
+  Height = 257
+  HorizontalOffset = 564
+  VerticalOffset = 242
+  Width = 468
+  PPI = 144
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLConnector1
+    Left = 288
+    Top = 71
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\Users\nelso\Documents\pro\condominium1\condominium1_3.sqlite'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    HostName = 'localhost'
+    ConnectorType = 'SQLite3'
+    Left = 86
+    Top = 67
+  end
+end

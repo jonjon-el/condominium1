@@ -1,0 +1,142 @@
+object Form_report: TForm_report
+  Left = 396
+  Height = 576
+  Top = 164
+  Width = 768
+  Caption = 'Form_report'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object PageControl1: TPageControl
+    Left = 19
+    Height = 451
+    Top = 19
+    Width = 730
+    ActivePage = TabSheet1
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      ClientHeight = 413
+      ClientWidth = 722
+      object Label1: TLabel
+        Left = 19
+        Height = 25
+        Top = 19
+        Width = 51
+        Caption = 'Label1'
+        ParentColor = False
+      end
+      object Button_generate1: TButton
+        Left = 583
+        Height = 37
+        Top = 58
+        Width = 113
+        Caption = 'Button_generate1'
+        OnClick = Button_generate1Click
+        TabOrder = 0
+      end
+      object Memo1: TMemo
+        Left = 19
+        Height = 203
+        Top = 192
+        Width = 677
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 1
+        WordWrap = False
+      end
+      object CheckListBox1: TCheckListBox
+        Left = 19
+        Height = 120
+        Top = 58
+        Width = 547
+        Columns = 1
+        ItemHeight = 0
+        Sorted = True
+        TabOrder = 2
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+      ClientHeight = 413
+      ClientWidth = 722
+      object Label2: TLabel
+        Left = 19
+        Height = 25
+        Top = 19
+        Width = 51
+        Caption = 'Label2'
+        ParentColor = False
+      end
+      object Button_generate2: TButton
+        Left = 182
+        Height = 37
+        Top = 58
+        Width = 113
+        Caption = 'Button_generate2'
+        OnClick = Button_generate2Click
+        TabOrder = 0
+      end
+      object Memo2: TMemo
+        Left = 19
+        Height = 203
+        Top = 192
+        Width = 677
+        ReadOnly = True
+        TabOrder = 1
+        WordWrap = False
+      end
+      object DateTimePicker1: TDateTimePicker
+        Left = 19
+        Height = 33
+        Top = 62
+        Width = 128
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 2
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 44947
+        Time = 0.708940393516968
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object Button_close: TButton
+    Left = 19
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_close'
+    OnClick = Button_closeClick
+    TabOrder = 2
+  end
+  object Button_save: TButton
+    Left = 144
+    Height = 37
+    Top = 499
+    Width = 113
+    Caption = 'Button_save'
+    TabOrder = 3
+  end
+end

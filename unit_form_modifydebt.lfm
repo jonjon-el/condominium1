@@ -1,0 +1,92 @@
+object Form_modifyDebt: TForm_modifyDebt
+  Left = 730
+  Height = 576
+  Top = 189
+  Width = 768
+  AlphaBlend = True
+  Caption = 'Form_modifyDebt'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  ParentFont = True
+  LCLVersion = '2.2.4.0'
+  object GroupBox_nic: TGroupBox
+    Left = 29
+    Height = 96
+    Top = 29
+    Width = 701
+    Caption = 'GroupBox_nic'
+    ClientHeight = 66
+    ClientWidth = 697
+    TabOrder = 0
+    object Edit_nic: TEdit
+      Left = 19
+      Height = 33
+      Top = 19
+      Width = 658
+      TabOrder = 0
+      Text = 'Edit_nic'
+    end
+  end
+  object GroupBox_amount: TGroupBox
+    Left = 29
+    Height = 96
+    Top = 144
+    Width = 701
+    Caption = 'GroupBox_amount'
+    ClientHeight = 66
+    ClientWidth = 697
+    TabOrder = 1
+    object Edit_amount: TEdit
+      Left = 19
+      Height = 33
+      Top = 19
+      Width = 658
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+  end
+  object GroupBox_date: TGroupBox
+    Left = 29
+    Height = 96
+    Top = 259
+    Width = 701
+    Caption = 'GroupBox_date'
+    ClientHeight = 66
+    ClientWidth = 697
+    TabOrder = 2
+    object Edit_date: TEdit
+      Left = 19
+      Height = 33
+      Top = 19
+      Width = 658
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+  end
+  object Button_OK: TButton
+    Left = 29
+    Height = 37
+    Top = 480
+    Width = 113
+    Caption = 'Button_OK'
+    OnClick = Button_OKClick
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object Button_cancel: TButton
+    Left = 154
+    Height = 37
+    Top = 480
+    Width = 113
+    Caption = 'Button_cancel'
+    OnClick = Button_cancelClick
+    TabOrder = 5
+  end
+end

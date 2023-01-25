@@ -1,0 +1,9 @@
+{"version":1,"strings":[
+{"hash":56917715,"name":"tform_items.caption","sourcebytes":[70,111,114,109,95,105,116,101,109,115],"value":"Form_items"},
+{"hash":254282563,"name":"tform_items.tabsheet_persons.caption","sourcebytes":[84,97,98,83,104,101,101,116,95,112,101,114,115,111,110,115],"value":"TabSheet_persons"},
+{"hash":3688515,"name":"tform_items.tabsheet_properties.caption","sourcebytes":[84,97,98,83,104,101,101,116,95,112,114,111,112,101,114,116,105,101,115],"value":"TabSheet_properties"},
+{"hash":196512763,"name":"tform_items.button_ok.caption","sourcebytes":[66,117,116,116,111,110,95,79,75],"value":"Button_OK"},
+{"hash":235805017,"name":"tform_items.button_modify.caption","sourcebytes":[66,117,116,116,111,110,95,109,111,100,105,102,121],"value":"Button_modify"},
+{"hash":191417108,"name":"tform_items.button_add.caption","sourcebytes":[66,117,116,116,111,110,95,97,100,100],"value":"Button_add"},
+{"hash":207723045,"name":"tform_items.button_delete.caption","sourcebytes":[66,117,116,116,111,110,95,100,101,108,101,116,101],"value":"Button_delete"}
+]}

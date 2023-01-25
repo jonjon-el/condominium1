@@ -1,0 +1,144 @@
+object Form_modifyPayment: TForm_modifyPayment
+  Left = 707
+  Height = 576
+  Top = 283
+  Width = 768
+  HorzScrollBar.Page = 739
+  VertScrollBar.Page = 576
+  AlphaBlend = True
+  AutoScroll = True
+  Caption = 'Form_modifyPayment'
+  ClientHeight = 576
+  ClientWidth = 742
+  DesignTimePPI = 144
+  ParentFont = True
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 587
+    Width = 742
+    Panels = <>
+  end
+  object GroupBox_propertyName: TGroupBox
+    Left = 29
+    Height = 86
+    Top = 19
+    Width = 710
+    Caption = 'GroupBox_propertyName'
+    ClientHeight = 56
+    ClientWidth = 706
+    TabOrder = 1
+    object Edit_propertyName: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 120
+      TabOrder = 0
+    end
+  end
+  object GroupBox_NIC: TGroupBox
+    Left = 29
+    Height = 86
+    Top = 115
+    Width = 710
+    Caption = 'GroupBox_NIC'
+    ClientHeight = 56
+    ClientWidth = 706
+    TabOrder = 2
+    object Edit_NIC: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 120
+      TabOrder = 0
+    end
+  end
+  object GroupBox_firstName: TGroupBox
+    Left = 29
+    Height = 86
+    Top = 211
+    Width = 710
+    Caption = 'GroupBox_firstName'
+    ClientHeight = 56
+    ClientWidth = 706
+    TabOrder = 3
+    object Edit_firstName: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 120
+      TabOrder = 0
+    end
+  end
+  object Button_OK: TButton
+    Left = 29
+    Height = 37
+    Top = 586
+    Width = 113
+    Caption = 'Button_OK'
+    OnClick = Button_OKClick
+    TabOrder = 4
+  end
+  object Button_cancel: TButton
+    Left = 154
+    Height = 37
+    Top = 586
+    Width = 113
+    Caption = 'Button_cancel'
+    OnClick = Button_cancelClick
+    TabOrder = 5
+  end
+  object GroupBox_lastName: TGroupBox
+    Left = 29
+    Height = 86
+    Top = 307
+    Width = 710
+    Caption = 'GroupBox_lastName'
+    ClientHeight = 56
+    ClientWidth = 706
+    TabOrder = 6
+    object Edit_lastName: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 120
+      TabOrder = 0
+    end
+  end
+  object GroupBox_amount: TGroupBox
+    Left = 29
+    Height = 86
+    Top = 403
+    Width = 710
+    Caption = 'GroupBox_amount'
+    ClientHeight = 56
+    ClientWidth = 706
+    TabOrder = 7
+    object Edit_amount: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 120
+      TabOrder = 0
+    end
+  end
+  object GroupBox_date: TGroupBox
+    Left = 29
+    Height = 86
+    Top = 490
+    Width = 710
+    Caption = 'GroupBox_date'
+    ClientHeight = 56
+    ClientWidth = 706
+    TabOrder = 8
+    object Edit_date: TEdit
+      Left = 19
+      Height = 33
+      Top = 10
+      Width = 120
+      TabOrder = 0
+    end
+  end
+end

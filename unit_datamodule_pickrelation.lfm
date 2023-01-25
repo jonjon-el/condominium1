@@ -1,0 +1,17 @@
+object DataModule_pickRelation: TDataModule_pickRelation
+  OldCreateOrder = False
+  Height = 226
+  HorizontalOffset = 594
+  VerticalOffset = 246
+  Width = 226
+  PPI = 144
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = DataModule_main.SQLConnector1
+    Transaction = DataModule_main.SQLTransaction1
+    Params = <>
+    Macros = <>
+    Left = 76
+    Top = 76
+  end
+end

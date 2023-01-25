@@ -1,0 +1,58 @@
+object Form_root: TForm_root
+  Left = 518
+  Height = 576
+  Top = 132
+  Width = 768
+  AlphaBlend = True
+  Caption = 'Form_root'
+  ClientHeight = 576
+  ClientWidth = 768
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.2.4.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 540
+    Width = 768
+    Panels = <>
+  end
+  object Button_items: TButton
+    Left = 301
+    Height = 37
+    Top = 154
+    Width = 113
+    Caption = 'Button_items'
+    OnClick = Button_itemsClick
+    TabOrder = 1
+  end
+  object Button_relations: TButton
+    Left = 301
+    Height = 37
+    Top = 197
+    Width = 113
+    Caption = 'Button_relations'
+    OnClick = Button_relationsClick
+    TabOrder = 2
+  end
+  object Button_moves: TButton
+    Left = 301
+    Height = 37
+    Top = 240
+    Width = 113
+    Caption = 'Button_moves'
+    OnClick = Button_movesClick
+    TabOrder = 3
+  end
+  object Button_report: TButton
+    Left = 301
+    Height = 37
+    Top = 288
+    Width = 113
+    Caption = 'Button_report'
+    OnClick = Button_reportClick
+    TabOrder = 4
+  end
+end

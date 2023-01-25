@@ -1,0 +1,49 @@
+object DataModule_item: TDataModule_item
+  OldCreateOrder = False
+  Height = 226
+  HorizontalOffset = 594
+  VerticalOffset = 246
+  Width = 226
+  PPI = 144
+  object SQLQuery1: TSQLQuery
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nic'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'firstName'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'lastName'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'birthDay'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = DataModule_main.SQLConnector1
+    Transaction = DataModule_main.SQLTransaction1
+    SQL.Strings = (
+      ''
+    )
+    Params = <>
+    Macros = <>
+    Left = 48
+    Top = 48
+  end
+end
