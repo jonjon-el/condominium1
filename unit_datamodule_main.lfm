@@ -14,12 +14,36 @@ object DataModule_main: TDataModule_main
   object SQLConnector1: TSQLConnector
     Connected = False
     LoginPrompt = False
-    DatabaseName = 'C:\Users\nelso\Documents\pro\condominium1\condominium1_3.sqlite'
     KeepConnection = False
     Transaction = SQLTransaction1
-    HostName = 'localhost'
-    ConnectorType = 'SQLite3'
+    ConnectorType = 'PostgreSQL'
     Left = 86
     Top = 67
+  end
+  object SQLScript1: TSQLScript
+    DataBase = SQLConnector1
+    Transaction = SQLTransaction1
+    AutoCommit = False
+    UseDollarString = False
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    Left = 188
+    Top = 165
   end
 end

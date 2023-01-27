@@ -66,7 +66,7 @@ begin
   ' WHERE debts_contracted.date=strftime("%s", :date)';
   SQLQuery1.Params.ParamByName('date').AsString:=FormatDateTime('YYYY-MM-DD', date);
 
-  valueTable:=TValueTable.Create();
+  //valueTable:=TValueTable.Create();
   try
     SQLQuery1.Open();
     while not SQLQuery1.EOF do

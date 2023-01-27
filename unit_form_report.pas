@@ -94,6 +94,7 @@ begin
     line:=phrase+': '+FloatToStr(previousBalance);
     Memo2.Append(line);
     //Contracted debts
+    contractedDebts:=unit_dataModule_report.TValueTable.Create();
     unit_dataModule_report.DataModule_report.GetContractedDebts(DateTimePicker1.Date, contractedDebts);
     Memo1Strings.TryGetValue('contractedDebts', phrase);
     line:=phrase+': ';
