@@ -24,6 +24,8 @@ const
 
   section_name='connection';
 
+
+
 type
 
   { TConfigIni }

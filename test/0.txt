@@ -1,0 +1,19 @@
+0
+add another user in external database editor.
+OK.
+
+1
+same that 0 while program is running.
+OK.
+
+2
+adding a property while running.
+OK.
+
+3
+adding debts.
+OK.
+
+4
+adding payments.
+OK.

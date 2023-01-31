@@ -56,13 +56,12 @@ procedure TForm_root.FormCreate(Sender: TObject);
 var
   path_exe: string;
   path_database: string;
-
 begin
-  //StatusBar1.SimpleText:='Loading settings';
-  //unit_datamodule_main.DataModule_main.chosenConfig:=unit_configIni.TConfigIni.Create;
-  //
+  StatusBar1.SimpleText:='Loading settings';
+  unit_datamodule_main.DataModule_main.chosenConfig:=unit_configIni.TConfigIni.Create;
+
   ////Reading the settings from permanent storage.
-  //unit_datamodule_main.DataModule_main.chosenConfig.ReadSettings(unit_configIni.pathToIni_defaultValue);
+  unit_datamodule_main.DataModule_main.chosenConfig.ReadSettings(unit_configIni.pathToIni_defaultValue);
 
   //Get path.
   path_exe:=ExtractFilePath(Application.ExeName);
@@ -145,8 +144,8 @@ end;
 procedure TForm_root.FormDestroy(Sender: TObject);
 begin
   StatusBar1.SimpleText:='Saving settings';
-  //unit_datamodule_main.DataModule_main.chosenConfig.WriteSettings(unit_configIni.pathToIni_defaultValue);
-  //FreeAndNil(unit_datamodule_main.DataModule_main.chosenConfig);
+  unit_datamodule_main.DataModule_main.chosenConfig.WriteSettings(unit_configIni.pathToIni_defaultValue);
+  FreeAndNil(unit_datamodule_main.DataModule_main.chosenConfig);
   StatusBar1.SimpleText:='Ready.';
 end;
 

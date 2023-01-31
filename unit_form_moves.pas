@@ -72,7 +72,7 @@ end;
 
 procedure TForm_moves.FormCreate(Sender: TObject);
 begin
-  StringGrid1.ColCount:=4;
+  //StringGrid1.ColCount:=4;
   StringGrid2.ColCount:=8;
 end;
 
@@ -94,10 +94,12 @@ var
   i: integer=0;
   j: integer=0;
   bufferRow: TStringArray;
+  colCount: integer=0;
 begin
   bufferRow:=default(TStringArray);
   bufferGrid.RowCount:=1;
   i:=1;
+  colCOunt:=bufferGrid.ColCount;
   while not unit_datamodule_moves.DataModule_moves.SQLQuery1.EOF do
   begin
     SetLength(bufferRow, bufferGrid.ColCount);

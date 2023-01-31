@@ -33,7 +33,11 @@ begin
   SQLQuery1.Close();
   if index=0 then
   begin
-    SQLQuery1.SQL.Text:='select * from debts';
+    //SQLQuery1.SQL.Text:='SELECT * from debts';
+    SQLQuery1.SQL.Text:='SELECT debts.id, properties.name, debts.amount, debts.date' +
+    ' FROM debts' +
+    ' INNER JOIN properties' +
+    ' ON debts.id_property=properties.id';
   end;
   if index=1 then
   begin
