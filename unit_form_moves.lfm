@@ -19,12 +19,12 @@ object Form_moves: TForm_moves
     Panels = <>
   end
   object PageControl1: TPageControl
-    Left = 19
+    Left = 24
     Height = 454
     Top = 19
     Width = 732
-    ActivePage = TabSheet_debts
-    TabIndex = 0
+    ActivePage = TabSheet_payments
+    TabIndex = 1
     TabOrder = 1
     object TabSheet_debts: TTabSheet
       Caption = 'TabSheet_debts'
@@ -36,6 +36,7 @@ object Form_moves: TForm_moves
         Top = 19
         Width = 682
         ColCount = 4
+        RowCount = 1
         TabOrder = 0
         Cells = (
           3
@@ -95,6 +96,45 @@ object Form_moves: TForm_moves
           7
           0
           'Bank reference'
+        )
+      end
+    end
+    object TabSheet_contractedDebts: TTabSheet
+      Caption = 'TabSheet_contractedDebts'
+      ClientHeight = 416
+      ClientWidth = 724
+      object StringGrid3: TStringGrid
+        Left = 16
+        Height = 387
+        Top = 16
+        Width = 696
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        ColCount = 8
+        RowCount = 1
+        TabOrder = 0
+        Cells = (
+          7
+          1
+          0
+          'nic'
+          2
+          0
+          'firstname'
+          3
+          0
+          'lastname'
+          4
+          0
+          'amount'
+          5
+          0
+          'date'
+          6
+          0
+          'kind'
+          7
+          0
+          'reason'
         )
       end
     end

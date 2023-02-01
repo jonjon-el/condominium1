@@ -138,7 +138,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="18">
+    <Units Count="19">
       <Unit0>
         <Filename Value="condominium1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -266,6 +266,14 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="unit_dataModule_report"/>
       </Unit17>
+      <Unit18>
+        <Filename Value="unit_form_contracteddebts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="form_contractedDebts"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unit_form_contractedDebts"/>
+      </Unit18>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

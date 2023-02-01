@@ -1,6 +1,10 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
+#: tform_contracteddebts.caption
+msgid "form_contractedDebts"
+msgstr ""
+
 #: tform_items.button_add.caption
 msgctxt "tform_items.button_add.caption"
 msgid "Button_add"
@@ -231,6 +235,10 @@ msgstr ""
 
 #: tform_moves.caption
 msgid "Form_moves"
+msgstr ""
+
+#: tform_moves.tabsheet_contracteddebts.caption
+msgid "TabSheet_contractedDebts"
 msgstr ""
 
 #: tform_moves.tabsheet_debts.caption

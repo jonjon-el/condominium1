@@ -1,0 +1,46 @@
+object form_contractedDebts: Tform_contractedDebts
+  Left = 683
+  Height = 480
+  Top = 176
+  Width = 640
+  AlphaBlend = True
+  Caption = 'form_contractedDebts'
+  ClientHeight = 480
+  ClientWidth = 640
+  DesignTimePPI = 144
+  ParentFont = True
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object StringGrid1: TStringGrid
+    Left = 51
+    Height = 235
+    Top = 53
+    Width = 517
+    ColCount = 8
+    TabOrder = 0
+    Cells = (
+      7
+      1
+      0
+      'nic'
+      2
+      0
+      'firstname'
+      3
+      0
+      'lastname'
+      4
+      0
+      'amount'
+      5
+      0
+      'date'
+      6
+      0
+      'kind'
+      7
+      0
+      'reason'
+    )
+  end
+end

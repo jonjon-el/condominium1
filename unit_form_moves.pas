@@ -21,6 +21,8 @@ type
     StatusBar1: TStatusBar;
     StringGrid1: TStringGrid;
     StringGrid2: TStringGrid;
+    StringGrid3: TStringGrid;
+    TabSheet_contractedDebts: TTabSheet;
     TabSheet_debts: TTabSheet;
     TabSheet_payments: TTabSheet;
     procedure Button_closeClick(Sender: TObject);
@@ -86,6 +88,11 @@ begin
   unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_datamodule_moves.DataModule_moves.RunQuery(1);
   Self.FillGrid(StringGrid2);
+  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
+
+  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
+  unit_datamodule_moves.DataModule_moves.RunQuery(2);
+  Self.FillGrid(StringGrid3);
   unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 end;
 
