@@ -16,8 +16,8 @@ object Form_report: TForm_report
     Height = 451
     Top = 19
     Width = 730
-    ActivePage = TabSheet1
-    TabIndex = 0
+    ActivePage = TabSheet2
+    TabIndex = 1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'TabSheet1'
@@ -88,6 +88,7 @@ object Form_report: TForm_report
         Top = 192
         Width = 677
         ReadOnly = True
+        ScrollBars = ssAutoBoth
         TabOrder = 1
         WordWrap = False
       end

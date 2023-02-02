@@ -30,7 +30,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
-    procedure FillGrid(bufferGrid: TStringGrid);
+    procedure FillGrid(bufferGrid: TStringGrid; dateIndex: integer);
   public
 
   end;
@@ -41,7 +41,7 @@ var
 implementation
 
 uses
-  unit_form_modifyDebt, unit_form_modifyPayment, unit_datamodule_moves, unit_datamodule_main;
+  DateUtils, unit_form_modifyDebt, unit_form_modifyPayment, unit_datamodule_moves, unit_datamodule_main;
 
 {$R *.lfm}
 
@@ -80,40 +80,54 @@ end;
 
 procedure TForm_moves.FormShow(Sender: TObject);
 begin
+  //debts
   unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_datamodule_moves.DataModule_moves.RunQuery(0);
-  Self.FillGrid(StringGrid1);
+  Self.FillGrid(StringGrid1, 3);
   unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 
+  //payments
   unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_datamodule_moves.DataModule_moves.RunQuery(1);
-  Self.FillGrid(StringGrid2);
+  Self.FillGrid(StringGrid2, 6);
   unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 
+  //contractedDebts
   unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_datamodule_moves.DataModule_moves.RunQuery(2);
-  Self.FillGrid(StringGrid3);
+  Self.FillGrid(StringGrid3, 5);
   unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 end;
 
-procedure TForm_moves.FillGrid(bufferGrid: TStringGrid);
+procedure TForm_moves.FillGrid(bufferGrid: TStringGrid; dateIndex: integer);
 var
   i: integer=0;
   j: integer=0;
   bufferRow: TStringArray;
   colCount: integer=0;
+  bufferDateInt: integer;
+  bufferDate: Tdate;
 begin
   bufferRow:=default(TStringArray);
   bufferGrid.RowCount:=1;
   i:=1;
-  colCOunt:=bufferGrid.ColCount;
+  colCount:=bufferGrid.ColCount;
   while not unit_datamodule_moves.DataModule_moves.SQLQuery1.EOF do
   begin
     SetLength(bufferRow, bufferGrid.ColCount);
     j:=0;
     while j < bufferGrid.ColCount do
     begin
-      bufferRow[j]:=unit_datamodule_moves.DataModule_moves.SQLQuery1.Fields[j].AsString;
+      if j=dateIndex then
+      begin
+        bufferDateInt:=unit_datamodule_moves.DataModule_moves.SQLQuery1.Fields[j].AsInteger;
+        bufferDate:=UnixToDateTime(bufferDateInt);
+        bufferRow[j]:=DateToStr(bufferDate);
+      end
+      else
+      begin
+        bufferRow[j]:=unit_datamodule_moves.DataModule_moves.SQLQuery1.Fields[j].AsString;
+      end;
       inc(j);
     end;
     bufferGrid.InsertRowWithValues(i, bufferRow);

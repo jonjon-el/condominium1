@@ -30,7 +30,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure PageControl_itemsChange(Sender: TObject);
   private
-    procedure FillGrid(bufferGrid: TStringGrid);
+    procedure FillGrid(bufferGrid: TStringGrid; dateIndex: integer);
   public
 
   end;
@@ -41,7 +41,7 @@ var
 implementation
 
 uses
-  unit_form_modifyPerson, unit_form_modifyProperty, unit_datamodule_main, unit_datamodule_item;
+  DateUtils, unit_form_modifyPerson, unit_form_modifyProperty, unit_datamodule_main, unit_datamodule_item;
 {$R *.lfm}
 
 { TForm_items }
@@ -61,12 +61,12 @@ procedure TForm_items.FormShow(Sender: TObject);
 begin
   unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_datamodule_item.DataModule_item.RunQuery(0);
-  Self.FillGrid(StringGrid1);
+  Self.FillGrid(StringGrid1, 4);
   unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 
   unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_datamodule_item.DataModule_item.RunQuery(1);
-  Self.FillGrid(StringGrid2);
+  Self.FillGrid(StringGrid2, -1);
   unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 end;
 
@@ -75,11 +75,13 @@ begin
   //Self.UpdateUI();
 end;
 
-procedure TForm_items.FillGrid(bufferGrid: TStringGrid);
+procedure TForm_items.FillGrid(bufferGrid: TStringGrid; dateIndex: integer);
 var
   i: integer=0;
   j: integer=0;
   bufferRow: TStringArray;
+  bufferDateInt: integer;
+  bufferDate: TDate;
 begin
   bufferRow:=default(TStringArray);
   bufferGrid.RowCount:=1;
@@ -90,7 +92,16 @@ begin
     j:=0;
     while j < bufferGrid.ColCount do
     begin
-      bufferRow[j]:=unit_datamodule_item.DataModule_item.SQLQuery1.Fields[j].AsString;
+      if j=dateIndex then
+      begin
+        bufferDateInt:=unit_datamodule_item.DataModule_item.SQLQuery1.Fields[j].AsInteger;
+        bufferDate:=UnixToDateTime(bufferDateInt);
+        bufferRow[j]:=DateToStr(bufferDate);
+      end
+      else
+      begin
+        bufferRow[j]:=unit_datamodule_item.DataModule_item.SQLQuery1.Fields[j].AsString;
+      end;
       inc(j);
     end;
     bufferGrid.InsertRowWithValues(i, bufferRow);

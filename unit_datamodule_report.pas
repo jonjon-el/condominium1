@@ -208,7 +208,7 @@ end;
 
 function TDataModule_report.GetPropietariesNumber: integer;
 begin
-  SQLQuery1.SQL.Text:='SELECT count(persons.id)' +
+  SQLQuery1.SQL.Text:='SELECT count(DISTINCT persons.id)' +
   ' FROM persons' +
   ' INNER JOIN propietaries' +
   ' ON persons.id=propietaries.id_owner';

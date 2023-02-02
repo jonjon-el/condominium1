@@ -23,8 +23,8 @@ object Form_moves: TForm_moves
     Height = 454
     Top = 19
     Width = 732
-    ActivePage = TabSheet_payments
-    TabIndex = 1
+    ActivePage = TabSheet_contractedDebts
+    TabIndex = 2
     TabOrder = 1
     object TabSheet_debts: TTabSheet
       Caption = 'TabSheet_debts'

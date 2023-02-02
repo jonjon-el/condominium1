@@ -49,7 +49,7 @@ implementation
 {$R *.lfm}
 
 uses
-  unit_dataModule_report;
+  unit_dataModule_report, unit_datamodule_main;
 
 { TForm_report }
 
@@ -66,7 +66,6 @@ end;
 procedure TForm_report.Button_generate2Click(Sender: TObject);
 var
   i: integer=0;
-  value: double=0;
   line: string='';
   phrase: string='';
   previousContractedDebt, previousCredit, previousBalance: double;
@@ -75,7 +74,10 @@ var
   propietariesNumber: integer;
   avgSharedDebt: double;
 begin
-  //Adding previous debts.
+  Memo2.Clear();
+  line:='__________ __________ __________ __________ __________';
+  Memo2.Append(line);
+  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   try
     //Calculating...
     //Previous contracted debt
@@ -137,6 +139,9 @@ begin
       StatusBar1.SimpleText:=E.Message;
     end;
   end;
+  line:='__________ __________ __________ __________ __________';
+  Memo2.Append(line);
+  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 end;
 
 procedure TForm_report.FormCreate(Sender: TObject);
@@ -171,9 +176,11 @@ begin
   //Loading list of persons.
   list:=TStringList.Create();
   list.OwnsObjects:=True;
+  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
   unit_dataModule_report.DataModule_report.Get_propietaries(list);
   CheckListBox1.Items:=list;
   FreeAndNil(list);
+  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 end;
 
 end.

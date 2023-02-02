@@ -33,7 +33,8 @@ begin
   SQLQuery1.Close();
   if index=0 then
   begin
-    SQLQuery1.SQL.Text:='select * from persons';
+    SQLQuery1.SQL.Text:='SELECT persons.id, persons.nic, persons.firstname, persons.lastname, persons.birthday' +
+    ' FROM persons';
   end;
   if index=1 then
   begin

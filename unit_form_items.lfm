@@ -18,8 +18,8 @@ object Form_items: TForm_items
     Height = 461
     Top = 19
     Width = 713
-    ActivePage = TabSheet_persons
-    TabIndex = 0
+    ActivePage = TabSheet_properties
+    TabIndex = 1
     TabOrder = 0
     OnChange = PageControl_itemsChange
     object TabSheet_persons: TTabSheet
@@ -59,6 +59,7 @@ object Form_items: TForm_items
         Top = 19
         Width = 672
         AutoEdit = False
+        ColCount = 3
         TabOrder = 0
         Cells = (
           2
