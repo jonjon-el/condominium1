@@ -5,10 +5,11 @@ unit unit_datamodule_item;
 interface
 
 uses
-  Classes, SysUtils, SQLDB;
+  Classes, SysUtils, SQLDB, Generics.Collections;
 
 type
 
+  TItemDict = specialize TDictionary<string, string>;
   { TDataModule_item }
 
   TDataModule_item = class(TDataModule)
@@ -17,6 +18,15 @@ type
 
   public
     procedure RunQuery(index: integer);
+
+    procedure GetPerson(nic: string; out person: TItemDict);
+    procedure GetBuilding(buildingName: string; out building: TItemDict);
+
+    procedure ModifyPerson(nic: string; person: TItemDict);
+    procedure ModifyBuilding(buildingName: string; building: TItemDict);
+
+    procedure AppendPerson(person: TItemDict);
+    procedure AppendBuilding(building: TItemDict);
   end;
 
 var
@@ -25,6 +35,9 @@ var
 implementation
 
 {$R *.lfm}
+
+uses
+  DateUtils;
 
 { TDataModule_item }
 
@@ -43,6 +56,67 @@ begin
   SQLQuery1.Open();
   SQLQuery1.Last();//For recordCount shows all the records.
   SQLQuery1.First();
+end;
+
+procedure TDataModule_item.GetPerson(nic: string; out person: TItemDict);
+begin
+
+end;
+
+procedure TDataModule_item.GetBuilding(buildingName: string; out
+  building: TItemDict);
+begin
+
+end;
+
+procedure TDataModule_item.ModifyPerson(nic: string; person: TItemDict);
+begin
+
+end;
+
+procedure TDataModule_item.ModifyBuilding(buildingName: string;
+  building: TItemDict);
+begin
+
+end;
+
+procedure TDataModule_item.AppendPerson(person: TItemDict);
+var
+  nic, firstname, lastname: string;
+  birthday: TDate;
+  birthdayStr: string;
+begin
+  if SQLQuery1.Active then
+  begin
+    SQLQuery1.Close();
+  end;
+  SQLQuery1.SQL.Text:='INSERT INTO persons(nic, firstname, lastname, birthday)' +
+  ' VALUES(:nic, :firstname, :lastname, :birthday)';
+
+  //Try to btain values from person
+  person.TryGetValue('nic', nic);
+  person.TryGetValue('firstname', firstname);
+  person.TryGetValue('lastname', lastname);
+  person.TryGetValue('birthday', birthdayStr);
+  birthday:=StrToDate(birthdayStr);
+
+  //Assigning to SQLQuery
+  SQLQuery1.ParamByName('nic').AsString:=nic;
+  SQLQuery1.ParamByName('firstname').AsString:=firstname;
+  SQLQuery1.ParamByName('lastname').AsString:=lastname;
+  SQLQuery1.ParamByName('birthday').AsInteger:=DateTimeToUnix(birthday);
+
+  try
+    SQLQuery1.ExecSQL();
+  finally
+    SQLQuery1.Close();
+  end;
+
+end;
+
+procedure TDataModule_item.AppendBuilding(building: TItemDict);
+begin
+
 end;
 
 end.

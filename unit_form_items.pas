@@ -23,6 +23,7 @@ type
     StringGrid2: TStringGrid;
     TabSheet_persons: TTabSheet;
     TabSheet_properties: TTabSheet;
+    procedure Button_addClick(Sender: TObject);
     procedure Button_CancelClick(Sender: TObject);
     procedure Button_modifyClick(Sender: TObject);
     procedure Button_OKClick(Sender: TObject);
@@ -115,6 +116,28 @@ begin
   ModalResult:=mrCancel;
 end;
 
+procedure TForm_items.Button_addClick(Sender: TObject);
+var
+  form_modifyItem: TForm;
+  mrResult: TModalResult;
+begin
+  if Self.PageControl_items.ActivePageIndex=0 then
+  begin
+    form_modifyItem:=unit_form_modifyPerson.TForm_modifyPerson.Create(Self);
+    (form_modifyItem As unit_form_modifyPerson.TForm_modifyPerson).role:='append';
+  end;
+  if Self.PageControl_items.ActivePageIndex=1 then
+  begin
+    form_modifyItem:=unit_form_modifyProperty.TForm_modifyProperty.Create(Self);
+  end;
+  self.Hide();
+  mrResult:=form_modifyItem.ShowModal();
+  if mrResult=mrOK then StatusBar1.SimpleText:='OK'
+  else StatusBar1.SimpleText:='Cancel';
+  FreeAndNil(form_modifyItem);
+  self.Show();
+end;
+
 procedure TForm_items.Button_modifyClick(Sender: TObject);
 var
   form_modifyItem: TForm;
@@ -123,6 +146,7 @@ begin
   if Self.PageControl_items.ActivePageIndex=0 then
   begin
     form_modifyItem:=unit_form_modifyPerson.TForm_modifyPerson.Create(Self);
+    (form_modifyItem As unit_form_modifyPerson.TForm_modifyPerson).role:='modify';
   end;
   if Self.PageControl_items.ActivePageIndex=1 then
   begin
