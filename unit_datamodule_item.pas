@@ -22,8 +22,8 @@ type
     procedure GetPerson(nic: string; out person: TItemDict);
     procedure GetBuilding(buildingName: string; out building: TItemDict);
 
-    procedure ModifyPerson(nic: string; person: TItemDict);
-    procedure ModifyBuilding(buildingName: string; building: TItemDict);
+    procedure ModifyPerson(person: TItemDict);
+    procedure ModifyBuilding(building: TItemDict);
 
     procedure AppendPerson(person: TItemDict);
     procedure AppendBuilding(building: TItemDict);
@@ -69,15 +69,52 @@ begin
 
 end;
 
-procedure TDataModule_item.ModifyPerson(nic: string; person: TItemDict);
+procedure TDataModule_item.ModifyPerson(person: TItemDict);
+var
+  nic: string;
+  firstname: string;
+  lastname: string;
+  birthdayStr: string;
+  birthday: TDate;
 begin
+  if SQLQuery1.Active then
+  begin
+    SQLQuery1.Close();
+  end;
 
+  //Try to btain values from person
+  person.TryGetValue('nic', nic);
+  person.TryGetValue('firstname', firstname);
+  person.TryGetValue('lastname', lastname);
+  person.TryGetValue('birthday', birthdayStr);
+  birthday:=StrToDate(birthdayStr);
+
+  SQLQuery1.SQL.Text:='UPDATE persons' +
+  ' SET firstname=:firstname, lastname=:lastname, birthday=:birthday' +
+  ' WHERE nic=:nic';
+
+  //Assigning to SQLQuery
+  SQLQuery1.ParamByName('nic').AsString:=nic;
+  SQLQuery1.ParamByName('firstname').AsString:=firstname;
+  SQLQuery1.ParamByName('lastname').AsString:=lastname;
+  SQLQuery1.ParamByName('birthday').AsInteger:=DateTimeToUnix(birthday);
+
+  try
+    SQLQuery1.ExecSQL();
+  finally
+    SQLQuery1.Close();
+  end;
 end;
 
-procedure TDataModule_item.ModifyBuilding(buildingName: string;
-  building: TItemDict);
+procedure TDataModule_item.ModifyBuilding(building: TItemDict);
+var
+  buildingName: string;
 begin
-
+  if SQLQuery1.Active then
+  begin
+    SQLQuery1.Close();
+  end;
+  SQLQuery1.SQL.Text:='';
 end;
 
 procedure TDataModule_item.AppendPerson(person: TItemDict);

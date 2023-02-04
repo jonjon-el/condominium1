@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, EditBtn,
-  ComCtrls, DateTimePicker;
+  ComCtrls, DateTimePicker, unit_datamodule_item;
 
 type
 
@@ -32,6 +32,7 @@ type
 
   public
     role: string;
+    person: TItemDict;
   end;
 
 var
@@ -40,7 +41,7 @@ var
 implementation
 
 uses
-  unit_datamodule_main, unit_datamodule_item;
+  unit_datamodule_main;
 
 {$R *.lfm}
 
@@ -48,36 +49,41 @@ uses
 
 procedure TForm_modifyPerson.Button_OKClick(Sender: TObject);
 var
-  person: unit_datamodule_item.TItemDict;
+  //person: unit_datamodule_item.TItemDict;
   birthdayStr: string='';
 begin
   person:=unit_datamodule_item.TItemDict.Create();
-  if role='append' then
-  begin
-    person.AddOrSetValue('nic', Edit_nic.Text);
-    person.AddOrSetValue('firstname', Edit_firstName.Text);
-    person.AddOrSetValue('lastname', Edit_lastName.Text);
-    birthdayStr:=DateToStr(DateTimePicker_birthday.Date);
-    person.AddOrSetValue('birthday', birthdayStr);
-  end
-  else if role='modify' then
-  begin
 
-  end
-  else
-  begin
-    StatusBar1.SimpleText:='ERROR: invalid role.';
-  end;
+  person.AddOrSetValue('nic', Edit_nic.Text);
+  person.AddOrSetValue('firstname', Edit_firstName.Text);
+  person.AddOrSetValue('lastname', Edit_lastName.Text);
+  birthdayStr:=DateToStr(DateTimePicker_birthday.Date);
+  person.AddOrSetValue('birthday', birthdayStr);
+
   try
     unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
-    unit_datamodule_item.DataModule_item.AppendPerson(person);
-    unit_datamodule_main.DataModule_main.SQLTransaction1.Commit;
+
+    if role='append' then
+    begin
+      unit_datamodule_item.DataModule_item.AppendPerson(person);
+    end
+    else if role='modify' then
+    begin
+      unit_datamodule_item.DataModule_item.ModifyPerson(person);
+    end
+    else
+    begin
+      StatusBar1.SimpleText:='ERROR: invalid role.';
+    end;
+
+    unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
   finally
     if unit_datamodule_main.DataModule_main.SQLTransaction1.Active then
     begin
       unit_datamodule_main.DataModule_main.SQLTransaction1.Rollback();
     end;
   end;
+
   FreeAndNil(person);
   ModalResult:=mrOK;
 end;
@@ -89,36 +95,31 @@ end;
 
 procedure TForm_modifyPerson.FormShow(Sender: TObject);
 var
-  person: unit_datamodule_item.TItemDict;
-  birthdayStr: string='';
+  nic: string;
+  firstname: string;
+  lastname: string;
+  birthdayStr: string;
+  birthday: TDate;
 begin
-  //person:=unit_datamodule_item.TItemDict.Create();
-  if role='append' then
+  if role='modify' then
   begin
-    //person.AddOrSetValue('nic', Edit_nic.Text);
-    //person.AddOrSetValue('firstname', Edit_firstName.Text);
-    //person.AddOrSetValue('lastname', Edit_lastName.Text);
-    //birthdayStr:=DateToStr(DateTimePicker_birthday.Date);
-    //person.AddOrSetValue('birthday', birthdayStr);
-  end
-  else if role='modify' then
-  begin
+    //Try to btain values from person
+    person.TryGetValue('nic', nic);
+    person.TryGetValue('firstname', firstname);
+    person.TryGetValue('lastname', lastname);
+    person.TryGetValue('birthday', birthdayStr);
+    birthday:=StrToDate(birthdayStr);
 
-  end
-  else
-  begin
-    StatusBar1.SimpleText:='ERROR: invalid role.';
+    //Filling fields in the form.
+    Edit_nic.Text:=nic;
+    Edit_firstName.Text:=firstname;
+    Edit_lastName.Text:=lastname;
+    DateTimePicker_birthday.Date:=birthday;
+
+    //Marking Edit_nic as read only.
+    Edit_nic.ReadOnly:=True;
+    Edit_nic.Enabled:=False;
   end;
-  //try
-  //  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
-  //  unit_datamodule_item.DataModule_item.AppendPerson(person);
-  //  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit;
-  //finally
-  //  if unit_datamodule_main.DataModule_main.SQLTransaction1.Active then
-  //  begin
-  //    unit_datamodule_main.DataModule_main.SQLTransaction1.Rollback();
-  //  end;
-  //end;
 end;
 
 procedure TForm_modifyPerson.Button_cancelClick(Sender: TObject);

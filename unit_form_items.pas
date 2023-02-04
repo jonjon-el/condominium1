@@ -54,8 +54,8 @@ end;
 
 procedure TForm_items.FormCreate(Sender: TObject);
 begin
-  StringGrid1.ColCount:=5;
-  StringGrid2.ColCount:=3;
+  //StringGrid1.ColCount:=5;
+  //StringGrid2.ColCount:=3;
 end;
 
 procedure TForm_items.FormShow(Sender: TObject);
@@ -142,11 +142,33 @@ procedure TForm_items.Button_modifyClick(Sender: TObject);
 var
   form_modifyItem: TForm;
   mrResult: TModalResult;
+
+  //for item
+  cellValue: string;
+  item: TItemDict;
 begin
   if Self.PageControl_items.ActivePageIndex=0 then
   begin
     form_modifyItem:=unit_form_modifyPerson.TForm_modifyPerson.Create(Self);
     (form_modifyItem As unit_form_modifyPerson.TForm_modifyPerson).role:='modify';
+
+    //Get item from selected row in Grid and assign to dictionary called item.
+    item:=TItemDict.Create();
+    //NIC
+    cellValue:=StringGrid1.Cells[1, StringGrid1.Row];
+    item.AddOrSetValue('nic', cellValue);
+    //firstname
+    cellValue:=StringGrid1.Cells[2, StringGrid1.Row];
+    item.AddOrSetValue('firstname', cellValue);
+    //lastname
+    cellValue:=StringGrid1.Cells[3, StringGrid1.Row];
+    item.AddOrSetValue('lastname', cellValue);
+    //birthdayStr
+    cellValue:=StringGrid1.Cells[4, StringGrid1.Row];
+    item.AddOrSetValue('birthday', cellValue);
+
+    //Setting person item in the opening form.
+    (form_modifyItem As unit_form_modifyPerson.TForm_modifyPerson).person:=item;
   end;
   if Self.PageControl_items.ActivePageIndex=1 then
   begin

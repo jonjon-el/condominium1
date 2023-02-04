@@ -142,21 +142,6 @@ msgctxt "tform_modifyperson.datetimepicker_birthday.textfornulldate"
 msgid "NULL"
 msgstr ""
 
-#: tform_modifyperson.edit_firstname.text
-msgctxt "tform_modifyperson.edit_firstname.text"
-msgid "Edit1"
-msgstr ""
-
-#: tform_modifyperson.edit_lastname.text
-msgctxt "tform_modifyperson.edit_lastname.text"
-msgid "Edit1"
-msgstr ""
-
-#: tform_modifyperson.edit_nic.text
-msgctxt "tform_modifyperson.edit_nic.text"
-msgid "Edit_nic"
-msgstr ""
-
 #: tform_modifyperson.groupbox_birthday.caption
 msgctxt "tform_modifyperson.groupbox_birthday.caption"
 msgid "GroupBox_birthDay"

@@ -28,7 +28,6 @@ object Form_modifyPerson: TForm_modifyPerson
       Top = 8
       Width = 568
       TabOrder = 0
-      Text = 'Edit_nic'
     end
   end
   object GroupBox_firstName: TGroupBox
@@ -46,7 +45,6 @@ object Form_modifyPerson: TForm_modifyPerson
       Top = 8
       Width = 568
       TabOrder = 0
-      Text = 'Edit1'
     end
   end
   object GroupBox_lastName: TGroupBox
@@ -64,7 +62,6 @@ object Form_modifyPerson: TForm_modifyPerson
       Top = 8
       Width = 568
       TabOrder = 0
-      Text = 'Edit1'
     end
   end
   object GroupBox_birthDay: TGroupBox
