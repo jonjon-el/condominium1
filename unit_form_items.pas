@@ -25,6 +25,7 @@ type
     TabSheet_properties: TTabSheet;
     procedure Button_addClick(Sender: TObject);
     procedure Button_CancelClick(Sender: TObject);
+    procedure Button_deleteClick(Sender: TObject);
     procedure Button_modifyClick(Sender: TObject);
     procedure Button_OKClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -32,6 +33,7 @@ type
     procedure PageControl_itemsChange(Sender: TObject);
   private
     procedure FillGrid(bufferGrid: TStringGrid; dateIndex: integer);
+    procedure UpdateUI();
   public
 
   end;
@@ -54,26 +56,18 @@ end;
 
 procedure TForm_items.FormCreate(Sender: TObject);
 begin
-  //StringGrid1.ColCount:=5;
-  //StringGrid2.ColCount:=3;
+
 end;
 
 procedure TForm_items.FormShow(Sender: TObject);
 begin
-  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
-  unit_datamodule_item.DataModule_item.RunQuery(0);
-  Self.FillGrid(StringGrid1, 4);
-  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
+  UpdateUI();
 
-  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
-  unit_datamodule_item.DataModule_item.RunQuery(1);
-  Self.FillGrid(StringGrid2, -1);
-  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
 end;
 
 procedure TForm_items.PageControl_itemsChange(Sender: TObject);
 begin
-  //Self.UpdateUI();
+
 end;
 
 procedure TForm_items.FillGrid(bufferGrid: TStringGrid; dateIndex: integer);
@@ -111,9 +105,49 @@ begin
   end;
 end;
 
+procedure TForm_items.UpdateUI;
+begin
+  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
+  unit_datamodule_item.DataModule_item.RunQuery(0);
+  Self.FillGrid(StringGrid1, 4);
+  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
+
+  unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
+  unit_datamodule_item.DataModule_item.RunQuery(1);
+  Self.FillGrid(StringGrid2, -1);
+  unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
+end;
+
 procedure TForm_items.Button_CancelClick(Sender: TObject);
 begin
   ModalResult:=mrCancel;
+end;
+
+procedure TForm_items.Button_deleteClick(Sender: TObject);
+var
+  row: integer;
+  col: integer;
+  nic: string;
+  isDeleted: Boolean=False;
+begin
+  col:=1;//Corresponding to the nic in the grid.
+  row:=StringGrid1.Row;
+  nic:=StringGrid1.Cells[col, row];
+  try
+    unit_datamodule_main.DataModule_main.SQLTransaction1.StartTransaction();
+    unit_datamodule_item.DataModule_item.DeletePerson(nic);
+    unit_datamodule_main.DataModule_main.SQLTransaction1.Commit();
+    isDeleted:=True;
+  finally
+    if unit_datamodule_main.DataModule_main.SQLTransaction1.Active then
+    begin
+      unit_datamodule_main.DataModule_main.SQLTransaction1.Rollback();
+    end;
+  end;
+  if isDeleted=True then
+  begin
+    UpdateUI();
+  end;
 end;
 
 procedure TForm_items.Button_addClick(Sender: TObject);

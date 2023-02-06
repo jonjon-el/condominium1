@@ -115,6 +115,7 @@ object Form_items: TForm_items
     Top = 416
     Width = 94
     Caption = 'Button_delete'
+    OnClick = Button_deleteClick
     TabOrder = 5
   end
 end

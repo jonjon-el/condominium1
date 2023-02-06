@@ -27,6 +27,9 @@ type
 
     procedure AppendPerson(person: TItemDict);
     procedure AppendBuilding(building: TItemDict);
+
+    procedure DeletePerson(nic: string);
+    procedure DeleteBuilding(buildingName: string);
   end;
 
 var
@@ -152,6 +155,31 @@ begin
 end;
 
 procedure TDataModule_item.AppendBuilding(building: TItemDict);
+begin
+
+end;
+
+procedure TDataModule_item.DeletePerson(nic: string);
+begin
+  if SQLQuery1.Active then
+  begin
+    SQLQuery1.Close();
+  end;
+  SQLQuery1.SQL.Text:='DELETE FROM persons' +
+  ' WHERE persons.nic=:nic';
+
+  //Assigning to SQLQuery
+  SQLQuery1.ParamByName('nic').AsString:=nic;
+
+  try
+    SQLQuery1.ExecSQL();
+  finally
+    SQLQuery1.Close();
+  end;
+
+end;
+
+procedure TDataModule_item.DeleteBuilding(buildingName: string);
 begin
 
 end;
